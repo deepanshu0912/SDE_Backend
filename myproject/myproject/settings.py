@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # ... other apps
     'rest_framework',
+    'corsheaders',
     'rest_framework_simplejwt',
     'api',
 
@@ -51,6 +52,7 @@ REST_FRAMEWORK = {
     )
 }
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -148,3 +150,13 @@ SIMPLE_JWT = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins
+# Or if you want to specify only specific origins:
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # Frontend development server
+
+#     "http://127.0.0.1:3000",
+# ]
+
+CORS_ALLOW_CREDENTIALS = True 

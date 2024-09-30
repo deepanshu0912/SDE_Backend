@@ -1,4 +1,4 @@
-#!/home/govind/projects/backend/myenv/bin/python3
+#!/home/deepanshu/Desktop/SDE/SDE_Backend/myenv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
